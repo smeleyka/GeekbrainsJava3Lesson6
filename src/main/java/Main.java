@@ -1,5 +1,8 @@
+import com.sun.deploy.util.ArrayUtil;
+
 import java.awt.image.AreaAveragingScaleFilter;
 import java.awt.print.PrinterGraphics;
+import java.lang.reflect.Array;
 import java.util.*;
 
 /**
@@ -8,31 +11,11 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        Integer[] integerArr = {1, 2, 4, 0, 5, 4, 7, 0};
-        arrayMod(integerArr);
+        Integer[] integerArr = {1, 2, 3, 1, 1, 1, 1, 1};
+        Integer[] integerArr2 = {1, 1, 4, 1, 1, 1, 1, 1};
+        ArrayModificator a = new ArrayModificator();
+        System.out.println(Arrays.toString(a.arrayMod(integerArr)));
+        System.out.println(a.arrayCheck(integerArr2));
 
-    }
-
-    public static Integer[] arrayMod(Integer[] inArr) {
-        Integer integer = 4;
-
-        ArrayList<Integer> arrayList = new ArrayList<Integer>(Arrays.asList(inArr));
-        ListIterator<Integer> arrayListIt = arrayList.listIterator();
-
-        while (arrayListIt.hasNext() & arrayList.contains(integer)) {
-            System.out.println(arrayListIt.next());
-            arrayListIt.remove();
-            System.out.println(arrayList.);
-
-        }
-        System.out.println();
-        while (arrayListIt.hasNext()) {
-            System.out.println(arrayListIt.next());
-        }
-        System.out.println(arrayList.size());
-
-
-
-        return null;
     }
 }
