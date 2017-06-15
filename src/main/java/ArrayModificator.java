@@ -13,9 +13,10 @@ public class ArrayModificator {
         Integer integer = 4;
         ArrayList<Integer> arrayList = new ArrayList<Integer>(Arrays.asList(inArr));
         try {
-            if (!arrayList.contains(4)) throw new RuntimeException("");
+            if (!arrayList.contains(4)) throw new RuntimeException();
         }catch (RuntimeException e){
-
+            System.out.println(e.fillInStackTrace());
+            System.out.println("No number");
         }
 
         ListIterator<Integer> arrayListIt = arrayList.listIterator();
