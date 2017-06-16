@@ -7,23 +7,20 @@ import java.util.ListIterator;
  */
 public class ArrayModificator {
 
-    public Integer[] arrayMod(Integer[] inArr){
+    public Integer[] arrayCut(Integer[] inArr) {
 
         Integer[] outArr;
         Integer integer = 4;
         ArrayList<Integer> arrayList = new ArrayList<Integer>(Arrays.asList(inArr));
-        try {
-            if (!arrayList.contains(4)) throw new RuntimeException();
-        }catch (RuntimeException e){
-            System.out.println(e.fillInStackTrace());
-            System.out.println("No number");
-        }
+
+        if (!arrayList.contains(4)) throw new RuntimeException();
 
         ListIterator<Integer> arrayListIt = arrayList.listIterator();
         while (arrayListIt.hasNext() & arrayList.contains(integer)) {
             arrayListIt.next();
             arrayListIt.remove();
         }
+
         outArr = arrayList.toArray(new Integer[arrayList.size()]);
         return outArr;
     }
